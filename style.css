@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Roboto";
+  font-size: 18px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: lightsalmon;
+}
+
+#app {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: 3.5rem;
+}
+
+header {
+  margin-block: 3.5rem;
+}
+
+header > h1 {
+  font-family: "Lobster";
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 0 black;
+}
+
+.sections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#input-section {
+  width: 100%;
+}
+
+#input-section > * {
+  display: block;
+  width: 100%;
+}
+
+#input-section > * + * {
+  margin-top: 0.5rem;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.1rem 0.25rem;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+button {
+  padding: 0.15rem 0.35rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 1.1rem;
+}
