@@ -21,18 +21,16 @@
         <main>
             <div class="sections">
                 <div id="input-section">
-                    <input :type="inputType" id="first-password" v-model="firstInput"
-                        @input="checkEquality(); checkLowerCaseLetters(); checkUpperCaseLetters(); checkNumbers(); check10orMoreChars()">
-                    <input :type="inputType" id="second-password" v-model="secondInput"
-                        @input="checkEquality(); checkLowerCaseLetters(); checkUpperCaseLetters(); checkNumbers(); check10orMoreChars()">
+                    <input :type="inputType" id="first-password" v-model="firstInput">
+                    <input :type="inputType" id="second-password" v-model="secondInput">
                     <button id="toggle-input-type" @click="toggleInputs()">{{ toggledButtonText }}</button>
                 </div>
                 <div id="checking-section">
-                    <p>Passwords are equal <span id="equal-password">{{ passwordsAreEqual }}</span></p>
-                    <p>Lower Case Letters <span id="lower-case">{{ hasLowerCaseLetters }}</span></p>
-                    <p>Upper Case Letters <span id="upper-case">{{ hasUpperCaseLetters }}</span></p>
-                    <p>Contains Numbers <span id="numbers">{{ hasNumbers }}</span></p>
-                    <p>At least 10 chars long <span id="at-least-ten-chars">{{ atLeast10chars }}</span></p>
+                    <p>Passwords are equal <span id="equal-password">{{ passwordEquality }}</span></p>
+                    <p>Lower Case Letters <span id="lower-case">{{ lowerCaseLetters }}</span></p>
+                    <p>Upper Case Letters <span id="upper-case">{{ upperCaseLetters }}</span></p>
+                    <p>Contains Numbers <span id="numbers">{{ containsNumbers }}</span></p>
+                    <p>At least 10 chars long <span id="at-least-ten-chars">{{ length10atLeast }}</span></p>
                 </div>
             </div>
         </main>
