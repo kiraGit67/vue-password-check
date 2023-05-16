@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Check with Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Password-Check</h1>
+        </header>
+        <main>
+            <div class="sections">
+                <div id="input-section">
+                    <input :type="inputType" id="first-password" v-model="firstInput"
+                        @input="checkEquality(); checkLowerCaseLetters(); checkUpperCaseLetters(); checkNumbers(); check10orMoreChars()">
+                    <input :type="inputType" id="second-password" v-model="secondInput"
+                        @input="checkEquality(); checkLowerCaseLetters(); checkUpperCaseLetters(); checkNumbers(); check10orMoreChars()">
+                    <button id="toggle-input-type" @click="toggleInputs()">{{ toggledButtonText }}</button>
+                </div>
+                <div id="checking-section">
+                    <p>Passwords are equal <span id="equal-password">{{ passwordsAreEqual }}</span></p>
+                    <p>Lower Case Letters <span id="lower-case">{{ hasLowerCaseLetters }}</span></p>
+                    <p>Upper Case Letters <span id="upper-case">{{ hasUpperCaseLetters }}</span></p>
+                    <p>Contains Numbers <span id="numbers">{{ hasNumbers }}</span></p>
+                    <p>At least 10 chars long <span id="at-least-ten-chars">{{ atLeast10chars }}</span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
